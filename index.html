@@ -1,0 +1,133 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Age Calculator</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #ageCalculator {
+      margin: 100 auto;
+      max-width: 1200px;
+      padding: 20px;
+      border: 2px solid white;
+      border-radius: 10px;
+      text-align: center;
+    }
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: red;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="ageCalculator">
+    <h1>Age Calculator</h1>
+    <!-- Input field for the user to enter their birthdate -->
+    <label for="birthdate">Enter your birthdate:</label>
+    <input type="date" id="birthdate">
+    <!-- Button to trigger the age calculation -->
+    <button onclick="calculateAge()">Calculate</button>
+    <!-- Empty div to display the calculated age -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Function to calculate the age and display it
+    function calculateAge() {
+      // Get the user's birthdate from the input field
+      const birthdate = new Date(document.getElementById("birthdate").value);
+      // Get today's date
+      const today = new Date();
+      // Calculate the age in milliseconds
+      const ageInMilliseconds = today - birthdate;
+      // Calculate the age in years
+      const ageInYears = Math.floor(ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000));
+      // Calculate the age in months
+      const ageInMonths = Math.floor(ageInMilliseconds / (30.44 * 24 * 60 * 60 * 1000));
+      // Calculate the age in days
+      const ageInDays = Math.floor(ageInMilliseconds / (24 * 60 * 60 * 1000));
+
+      // Display the calculated age in the result div
+      document.getElementById("result").innerHTML = `
+        <p>Age: ${ageInYears} years, ${ageInMonths} months, ${ageInDays} days</p>
+      `;
+    }
+  </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeeshan Rabbani - Web Developer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .project {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zeeshan Rabbani</h1>
+    <p>Web Developer</p>
+  </header>
+
+  <main>
+    <h2>About Me</h2>
+    <p>Hello, I'm Zeeshan Rabbani, a passionate web developer. I love building web applications and creating engaging user experiences. I have experience with typescript, HTML, CSS, JavaScript, and various frontend frameworks like React and Angular. I'm also familiar with backend technologies like Node.js and Express.</p>
+
+    
+    
+
+  </main>
+
+  <footer>
+    <p>Contact: likezee@gmail.com | Phone: +92 (321) 40-52120</p>
+  </footer>
+</body>
+</html>
+
+  
